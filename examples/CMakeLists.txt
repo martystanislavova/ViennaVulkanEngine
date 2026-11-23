@@ -80,6 +80,11 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/simple_forward_demo/CMakeLists.txt")
     vve_add_example_test(simple_forward_demo)
 endif()
 
+   # Hair simulation thesis prototype.
+   if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/hair_test/CMakeLists.txt")
+       add_subdirectory(hair_test)
+   endif()
+
 # The car example checks every frame that its parts follow their parent nodes and fails on a mismatch.
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/hierarchy_car/CMakeLists.txt")
     add_subdirectory(hierarchy_car)
